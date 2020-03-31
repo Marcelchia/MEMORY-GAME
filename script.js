@@ -48,7 +48,7 @@ if(timerHasBeenClicked === false) {
 
 timer.addEventListener('click',startTimer)
 
-//////////game play////////////
+////////each memory card
 
 var cards = document.querySelectorAll('.memory-card');
 
@@ -71,7 +71,7 @@ function shuffle() {
 
 shuffle();
 
-
+///////game play
 
 var firstCard, secondCard;
 
@@ -87,6 +87,7 @@ function flipCard() {
 
   if (lockBoard === true) return;
   if (this === firstCard) return;
+/////unable to re-click first card/////
 
   this.classList.add('flip');
 
@@ -102,10 +103,13 @@ function flipCard() {
 }
 
 var matchCounter = 0
+//////match count
 
 var count = 0;
 
 var flipCount =document.querySelector('#count');
+
+//////turn count
 
 
 ////////check matching cards////
