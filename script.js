@@ -101,7 +101,7 @@ var checkForMatch=function(){
     if( match ){
         disableCards();
         matchCounter = matchCounter + 1;
-        if (matchCounter === 10) {
+        if (matchCounter === 15) {
             gameHasWon()
         };
         }else{
@@ -144,7 +144,7 @@ function resetCard() {
 function shuffle() {
   for (var i = 0; i < cards.length; i++)
   {
-    var randomPos = Math.floor(Math.random() * 20);
+    var randomPos = Math.floor(Math.random() * 30);
     cards[i].style.order = randomPos;
 
    };

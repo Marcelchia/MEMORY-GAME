@@ -38,7 +38,7 @@ background-color:red;
 }
 
 .memory-game {
-  width: 700px;
+  width: 900px;
   height: 600px;
   margin: auto;
   display: flex;
@@ -47,8 +47,8 @@ background-color:red;
 }
 
 .memory-card {
-  width: calc(20% - 10px);
-  height: calc(25% - 10px);
+  width: calc(15% - 10px);
+  height: calc(20% - 10px);
   margin: 5px;
   position: relative;
   transform: scale(1);
