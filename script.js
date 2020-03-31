@@ -3,6 +3,7 @@
 
 var lockBoard = true;
 
+
 ///////start game//////unlock board////
 
 var start=document.querySelector('#startButton');
@@ -13,7 +14,7 @@ var gameStart=function(){
 
 start.addEventListener ('click',gameStart)
 
-/////set game timer
+///////set game timer
 
 var second = 0, minute = 0;
 
@@ -47,9 +48,30 @@ if(timerHasBeenClicked === false) {
 
 timer.addEventListener('click',startTimer)
 
-//////////game play///////
+//////////game play////////////
 
 var cards = document.querySelectorAll('.memory-card');
+
+///////(a) shuffle random,
+
+function shuffle() {
+    for (var i = 0; i < cards.length; i++)
+  {
+    var randomPos = Math.floor(Math.random() * 30);
+    cards[i].style.order = randomPos;
+
+    ////////flex-wrap///
+///////math.floor-whole number
+//////math.random (0-1) decimal
+
+    console.log(shuffle)
+
+    };
+};
+
+shuffle();
+
+
 
 var firstCard, secondCard;
 
@@ -132,38 +154,17 @@ var unflipCards=function() {
     }, 1000);
 };
 
-/////back to norm
+/////each memory card back to default state
 
 function resetCard() {
   [hasFlippedCard, lockBoard] = [false, false];
   [firstCard, secondCard] = [null, null];
 };
 
-///////shuffle random,
-
-function shuffle() {
-  for (var i = 0; i < cards.length; i++)
-  {
-    var randomPos = Math.floor(Math.random() * 30);
-    cards[i].style.order = randomPos;
-
-   };
-};
-
-shuffle();
-
-////////This is a comment to commit//
-
-
-////////flex-wrap///
-///////math.floor-whole number
-//////math.random (0-1) decimal
-
-
 
 ////////////Game ends
 
-////////All 20 cards have been flipped
+////////All 30 cards have been flipped
 
 
 var gameOver = document.querySelector('#game over')
