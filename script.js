@@ -63,7 +63,7 @@ for (var i = 0; i < cards.length; i++){
 
 function flipCard() {
 
-  if (lockBoard) return;
+  if (lockBoard === true) return;
   if (this === firstCard) return;
 
   this.classList.add('flip');
@@ -172,8 +172,6 @@ var gameHasWon = function() {
 
     var finalTime = timer.innerText;
     var finalCount = flipCount.innerText;
-
-    console.log (finalCount,finalTime)
 
     var congratulation = document.querySelector('#congratulations')
 
