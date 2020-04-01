@@ -1,4 +1,3 @@
-
 //////pre-game//////
 
 var lockBoard = true;
@@ -57,7 +56,7 @@ var cards = document.querySelectorAll('.memory-card');
 function shuffle() {
     for (var i = 0; i < cards.length; i++)
   {
-    var randomPos = Math.floor(Math.random() * 30);
+    var randomPos = Math.floor(Math.random() * 20);
     cards[i].style.order = randomPos;
 
     ////////flex-wrap///
@@ -127,7 +126,7 @@ var checkForMatch=function(){
     if( match ){
         disableCards();
         matchCounter = matchCounter + 1;
-        if (matchCounter === 15) {
+        if (matchCounter === 10) {
             gameHasWon()
         };
         }else{
@@ -168,7 +167,7 @@ function resetCard() {
 
 ////////////Game ends
 
-////////All 30 cards have been flipped
+////////All 20 cards have been flipped
 
 
 var gameOver = document.querySelector('#game over')
